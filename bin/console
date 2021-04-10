@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+folder = '../../../lib'
+pwd = File.absolute_path(__FILE__ + folder)
+
+Dir[File.expand_path(pwd + "/**/*.rb")].each do |file|
+  puts "requiring.. #{file}"
+
+  require file
+end
+
+require 'irb'
+IRB.start

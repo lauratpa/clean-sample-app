@@ -1,6 +1,7 @@
 require "roda"
 
-require "./lib/presentation/home/home_controller"
+require "./lib/presentation/home/controller"
+require "./lib/presentation/customers/controller"
 
 class App < Roda
   route do |r|
@@ -9,7 +10,11 @@ class App < Roda
     end
 
     r.get "home" do
-      Presentation::Home::HomeController::Index.new.call
+      Presentation::Home::Controller::Index.new.call
+    end
+
+    r.get "customers" do
+      Presentation::Customers::Controller::Index.new.call
     end
   end
 end

@@ -1,4 +1,5 @@
 require 'erb'
+require './lib/persistence/database_service'
 
 module Presentation
   class BaseController
@@ -14,6 +15,10 @@ module Presentation
       template = ERB.new(File.read('./lib/presentation/layouts/layout.html.erb'))
 
       template.result(binding)
+    end
+
+    def connection
+      Persistence::DatabaseService.instance.connection
     end
   end
 end
