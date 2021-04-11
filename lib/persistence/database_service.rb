@@ -1,7 +1,7 @@
-require 'singleton'
-require 'rom-sql'
-require_relative './relations/customers'
-require_relative './relations/employees'
+require "singleton"
+require "rom-sql"
+require_relative "./relations/customers"
+require_relative "./relations/employees"
 
 module Persistence
   class DatabaseService
@@ -10,7 +10,7 @@ module Persistence
     attr_reader :connection
 
     def initialize
-      @connection = ROM.container(:sql, ENV['DATABASE']) do |config|
+      @connection = ROM.container(:sql, ENV["DATABASE"]) do |config|
         config.register_relation Persistence::Relations::Customers
         config.register_relation Persistence::Relations::Employees
       end

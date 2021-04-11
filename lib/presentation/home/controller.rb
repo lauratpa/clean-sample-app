@@ -1,11 +1,11 @@
-require_relative '../base_controller'
+require_relative "../base_controller"
 
 module Presentation
   module Home
     class Controller
       class Index < Presentation::BaseController
         def call
-          view('home/views/index')
+          view("home/views/index")
         end
       end
     end

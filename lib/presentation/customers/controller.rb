@@ -1,4 +1,4 @@
-require_relative '../base_controller'
+require_relative "../base_controller"
 
 module Presentation
   module Customers
@@ -10,7 +10,7 @@ module Presentation
 
         def call
           @customers = @get_customer_list_query.call
-          view('customers/views/index')
+          view("customers/views/index")
         end
       end
     end

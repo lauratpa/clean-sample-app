@@ -1,6 +1,6 @@
-require 'rom-repository'
+require "rom-repository"
 
-require './lib/domain/customer'
+require "./lib/domain/customer"
 
 module Persistence
   module Repositories
@@ -10,7 +10,7 @@ module Persistence
         use: :timestamps,
         plugins_options: {
           timestamps: {
-            timestamps: %i(created_at updated_at)
+            timestamps: %i[created_at updated_at]
           }
         }
       )

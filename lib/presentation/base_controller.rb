@@ -1,5 +1,5 @@
-require 'erb'
-require './lib/persistence/database_service'
+require "erb"
+require "./lib/persistence/database_service"
 
 module Presentation
   class BaseController
@@ -12,7 +12,7 @@ module Presentation
     end
 
     def layout
-      template = ERB.new(File.read('./lib/presentation/layouts/layout.html.erb'))
+      template = ERB.new(File.read("./lib/presentation/layouts/layout.html.erb"))
 
       template.result(binding)
     end

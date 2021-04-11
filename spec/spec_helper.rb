@@ -14,9 +14,9 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-ENV['APP_ENV'] = 'test'
+ENV["APP_ENV"] = "test"
 
-require 'simplecov'
+require "simplecov"
 SimpleCov.start
 
 RSpec.configure do |config|

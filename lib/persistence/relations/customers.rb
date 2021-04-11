@@ -1,4 +1,4 @@
-require 'rom-sql'
+require "rom-sql"
 
 module Persistence
   module Relations
