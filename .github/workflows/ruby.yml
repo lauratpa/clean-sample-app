@@ -15,7 +15,6 @@ on:
 
 jobs:
   tests:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -24,7 +23,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      
+
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
@@ -33,7 +32,14 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+    - name: Migrate database
+      env:
+        APP_ENV: test
+      run: bundle exec rake db:migrate
+
     - name: Run style check
       run: bundle exec standardrb
+
     - name: Run tests
       run: bundle exec rspec
