@@ -1,5 +1,20 @@
 <div class="content">
-  <% @customers.each do |customer| %>
-    <%= customer.name %>
-  <% end %>
+  <h1>Customers</h1>
+
+  <table class="table is-hoverable is-narrow">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <th><%=customer.id %></th>
+          <th><%= customer.name %></th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
