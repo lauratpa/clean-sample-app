@@ -1,0 +1,4 @@
+/coverage
+spec/examples.txt
+db/architecture_test.db
+db/architecture.db

@@ -10,3 +10,10 @@ gem 'rom-sql'
 gem 'rom-repository'
 gem 'rake'
 gem 'sqlite3'
+gem 'rspec'
+gem 'rack-test'
+gem 'dotenv'
+
+group :test do
+  gem 'simplecov', require: false
+end

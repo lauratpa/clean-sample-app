@@ -10,7 +10,7 @@ module Persistence
     attr_reader :connection
 
     def initialize
-      @connection = ROM.container(:sql, 'sqlite://db/architecture.db') do |config|
+      @connection = ROM.container(:sql, ENV['DATABASE']) do |config|
         config.register_relation Persistence::Relations::Customers
         config.register_relation Persistence::Relations::Employees
       end
