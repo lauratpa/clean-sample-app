@@ -7,11 +7,11 @@ module Domain
     end
 
     def id
-      attributes['id']
+      attributes[:id]
     end
 
     def name
-      attributes['name']
+      attributes[:name]
     end
   end
 end

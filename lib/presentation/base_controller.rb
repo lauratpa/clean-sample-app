@@ -16,9 +16,5 @@ module Presentation
 
       template.result(binding)
     end
-
-    def connection
-      Persistence::DatabaseService.instance.connection
-    end
   end
 end

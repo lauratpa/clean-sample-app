@@ -1,5 +1,7 @@
 require 'rom-repository'
 
+require './lib/domain/customer'
+
 module Persistence
   module Repositories
     class Customers < ROM::Repository[:customers]
